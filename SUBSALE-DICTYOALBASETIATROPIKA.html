@@ -1,76 +1,742 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Listing</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
-<div class="property-container">
-	<section class="hero-image" id="hero-image">
+<!-- AOS Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-		<img src="https://afrproperty.onpay.my/media/uploads/SetiaTropika.jpg" class="active">
-		<img src="https://afrproperty.onpay.my/media/uploads/setiatropika-1.jpg">
-		<img src="https://afrproperty.onpay.my/media/uploads/setiatropika-2.jpg">
-		<img src="https://afrproperty.onpay.my/media/uploads/setiatropika-8.jpg">
-		<img src="https://afrproperty.onpay.my/media/uploads/setiatropika-7.jpg">
-		<img src="https://afrproperty.onpay.my/media/uploads/setiatropika-3.jpg">
-		<!--<img src="https://afrproperty.onpay.my/media/uploads/SI5.jpg">-->
-	</section>
 
-	<div class="property-details">
-
-		<div class="property-info">
-			<h1>DICTYO ALBA SETIA TROPIKA</h1>
-			<div class="details">DOUBLE STOREY TERRACE CORNER LOT</div>
-			<div class="price">RM 1,200,000</div>
-			<div class="details"><i class="fa-solid fa-bed"></i> 4 BEDROOMS <i class="fa-solid fa-bath"></i> 3 BATHROOMS   <i class="fa-solid fa-ruler-combined"></i> 3,509 SQFT </div>
-		</div>
-
-		<div class="text-section">
-			<div class="property-background">
-				<h1>Property Description</h1>
-				<p>
-					This stunning double-storey terrace corner lot in Taman Setia Tropika offers the perfect blend of space, style, and serenity. Its prime corner lot position ensures extra privacy and charm, making it a rare find.
-				</p>
-				<br>
-				<h1>Overview</h1>
-				<table>
-					<tbody>
-						<tr>
-							<th>Property Type</th>
-							<td>Residential</td>
-						</tr>
-						<tr>
-							<th>Location</th>
-							<td>Jalan Setia Tropika 5 @ Taman Setia Tropika</td>
-						</tr>
-						<tr>
-							<th>Accessibility</th>
-							<td>Senai Desaru Expressway, Eastern Dispersal Link, Pasir Gudang Highway, Tebrau Highway</td>
-						</tr>
-						<tr>
-							<th>Listing Last Updated</th>
-							<td>10/17/2024 5:37 PM</td>
-						</tr>
-					</tbody>
-				</table>
-				<br>
-				<h1>Property Features &amp; Amenities</h1>
-				<ul>
-					<li><i class="fas fa-shield-alt"></i> Gated &amp; Guarded community</li>
-					<li><i class="fas fa-compass"></i> Facing North East</li>
-					<li><i class="fas fa-school"></i> Primary and Secondary Schools</li>
-					<li><i class="fas fa-shopping-cart"></i> AEON Dato Onn, Econsave Taman Daya</li>
-					<li><i class="fas fa-mosque"></i> Sultan Iskandar Mosque</li>
-					<li><i class="fas fa-university"></i> International College, KPJ Bandar Dato Onn</li>
-				</ul>
-			</div>
-		</div>
-
-		<!-- Balut gallery-section & button-wrapper dalam gallery-container -->
-		<div class="gallery-container">
-			<div class="gallery-section">
-				<img src="https://afrproperty.onpay.my/media/uploads/SetiaTropika.jpg" alt="PropertyImage" onclick="changeImage(this)">
-				<img src="https://afrproperty.onpay.my/media/uploads/setiatropika-1.jpg" alt="PropertyImage" onclick="changeImage(this)">
-				<img src="https://afrproperty.onpay.my/media/uploads/setiatropika-2.jpg" alt="PropertyImage" onclick="changeImage(this)">
-				<img src="https://afrproperty.onpay.my/media/uploads/setiatropika-8.jpg" alt="PropertyImage" onclick="changeImage(this)">
-				<img src="https://afrproperty.onpay.my/media/uploads/setiatropika-7.jpg" alt="PropertyImage" onclick="changeImage(this)">
-				<img src="https://afrproperty.onpay.my/media/uploads/setiatropika-3.jpg" alt="PropertyImage" onclick="changeImage(this)">
-				<!--<span style="background-color: rgba(0, 0, 0, 0.8); color: white; font-size: 30px; font-weight: 700;">×</span> -->
-			</div>
-
+<style>
+	html {
+		scroll-behavior: smooth;
+	}
+	@media (min-width: 1024px) {
+	    body .container {
+	        max-width: min(1920px, 100%);
+	    }
+	}
+	
+	html, body {
+	    overflow-x: hidden !important; /* Prevents horizontal scrolling */
+	    width: 100%;
+	}
+	
+	
+	* {
+			/*margin-top:0!important; */
+			box-sizing: border-box;
 			
+		}
+	body {
+		
+		margin: 0!important;
+		padding: 0!important;
+		width: 100%!important;
+		height: 100%!important;
+	    font-family: Roboto, sans-serif;
+		
+	}
+	body.embed {
+	    background-color: transparent !important;
+	    background-image: none !important;
+	}
+	
+	.container div {
+	    margin-top: 0px !important;
+		margin-bottom: 0px !important;
+	}
+	
+	.container, #content, #form, .wrapper, .content-wrapper {
+	    margin: 0 !important;
+	    padding: 0 !important;
+		width:100%;
+	   	max-width: 100% !important;
+	    height: auto !important;
+	    box-shadow: none !important;
+	    background: transparent !important;
+	}
+	
+	header {
+		position: fixed; 
+		/*position: sticky; */
+		top: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px;
+		background: #002A43; /* Warna asal header */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		z-index: 1000; /* Ensure it stays on top */
+		width:102%;  
+		/*width:100%;*/
+		
+	}
+	
+	
+	
+	/*.logo1 {
+		font-size: 24px;
+		font-weight: bold;
+		padding-left: 10px; /* Ensures logo is aligned to the left */
+	
+	nav ul {
+	    list-style: none;
+	    display: flex;
+	    gap: 45px;
+	    margin-right: 20px;
+	
+	}
+	nav a {
+		text-decoration: none !important; /* Removes the underline */
+		color: white;
+		font-weight: bold;
+		/*margin-right: 20px; */
+		transition: color 0.3s ease; /* Smooth transition for hover effect */
+	}
+	
+	/* Change color of nav links on hover */
+	nav a:hover {
+		color: #b88917; /* Hover color */
+		text-decoration: none !important;
+	}
+	
+	/* Style the hamburger button */
+	#hamburger {
+	    background: transparent;
+	    border: none;
+	    font-size: 30px;
+	    cursor: pointer;
+	    display: none; /* Hide by default */
+	}
+	
+	#logoAfr {
+	    color: black;
+	    width: 64px;
+	    height: 58px;
+	    /*margin-left: 20px; */
+		margin-left: 12px;
+	}
+	
+	/* Display hamburger button only on mobile (smaller than 768px) */
+	@media (max-width: 768px) {
+	    header {
+	        justify-content: space-between;
+	       /* position: relative;  Make sure elements inside position correctly */
+			width:104%; 
+	    }
+		header {
+	         /* flex-direction: column; */
+	        align-items: center;
+	        text-align: center;
+	    }
+	
+	    #hamburger {
+	        display: block; /* Show hamburger button */
+			margin-left: auto; 
+			margin-right: 12px;
+	    }
+		
+		nav ul {
+	        flex-direction: column;
+	        gap: 30px;
+			padding: 20px;
+			font-size: medium;
+			text-transform: uppercase;
+			margin-top: 25px;
+			margin-right: 0px;
+	    }	  
+		
+		nav ul li{
+			display: block;
+	        text-align: center;
+	    }	    
+	}
+	
+	@media (max-width: 768px) {
+	    #side-menu {
+	        position: fixed;
+	        top: 0;
+	        right: -100%;  /* Initially off-screen */
+	        width: 250px; /* Adjust as needed */
+	        height: 100%;
+	        background-color: #002A43;
+			color: white;
+	        transition: left 0.3s ease-in-out; /* Smooth animation */
+	        z-index: 1000; /* Ensure it stays on top */
+			padding: 20px;
+			background: rgba(0, 42, 67, 0.7);
+	    }
+	
+	    #side-menu.active {
+	        right: 0; /* Slide in from the left */
+	    }
+	
+	    /* Add styles for the hamburger icon as needed */
+	    #menu-toggle {
+	        /* ... */
+	    }
+		
+		#close-menu {
+			background: none;
+			border: none;
+			color: white;
+			font-size: 24px;
+			cursor: pointer;
+			padding-top: 23px;
+			padding-right: 6px;
+		}
+	
+	}
+	
+	#backdrop {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+	    backdrop-filter: blur(5px); /* Blur effect */
+	    opacity: 0;
+	    visibility: hidden;
+	    transition: opacity 0.3s ease-in-out;
+	    z-index: 999; /* Make sure it's below the menu but above other content */
+	}
+	
+	/* Show the backdrop when the menu is active */
+	#side-menu.active + #backdrop {
+	    opacity: 1;
+	    visibility: visible;
+	}
+	
+	/* Display hamburger button only on mobile (smaller than 768px) */
+	@media (max-width: 991px) {
+		/* Ensure header items are spaced correctly on mobile */
+		
+		
+		 .hero-image {
+			width: 100%;
+			height: 300px; /* Sesuaikan ketinggian */
+			position: relative;
+			overflow: hidden;
+		}
+		.hero-image img {
+			 	width: 100%;
+				height: 100%;
+				object-fit: cover;
+		}
+		
+		.property-details{
+			    flex-direction: column;
+				padding:0px!important;
+		}
+		
+		
+		 .property-info {
+			
+			position: relative !important;
+			bottom: 0;
+			right: 0;
+			padding: 0 15px;
+			top:0% !important;
+			max-width: 100%!important;
+	    	}
+			
+	
+			.property-info h1 {
+				font-size: 22px;
+				font-weight: bold;
+				color: black;
+			}
+	
+			.price {
+				font-size: 28px;
+				font-weight: bold;
+				color: red;
+				margin-top: 5px;
+			}
+	
+			.details {
+				display: flex;
+				gap: 20px;
+				font-size: 16px;
+				color: #666;
+				margin-top: 10px;
+			}
+	
+			.details span {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+		
+			.gallery-container{
+				align-items: flex-start !important;
+			}
+	      .gallery-section {
+			  
+				 order: -1; /* Naikkan gallery ke atas */
+			}
+	
+			.gallery-section img {
+				width: 100%;
+				height: 120px;
+				object-fit: cover;
+				transition: transform 0.2s ease-in-out;
+			}
+	
+			.gallery-section img:hover {
+				transform: scale(1.05);
+			}
+		
+		
+	        .text-section {
+				order: 0; /* Pastikan Property Description di tengah */
+	            padding-top: 0px !important;
+				padding-left :50px;
+				padding-right : 50px;
+	            background-color: white;
+	        }
+		 	.button-wrapper {
+				 order: 1;
+				justify-content: center !important;
+			}
+	}
+	
+	
+	
+	body {
+	    font-family: Arial, sans-serif;
+	    margin: 0;
+	    padding: 0;
+	    background-color: #041e2e;
+	}
+	.property-container {
+	        display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-width: 90%;
+			margin: auto;
+			background: white;
+			padding: 20px;
+			border-radius: 10px;
+			
+	}
+	.hero-image {
+	   		/*width: 100%;
+	    	height: 500px;
+	    	position: relative;
+	    	overflow: hidden; /* Pastikan gambar tidak melebihi div */
+			/*box-shadow:0px 10px 20px white; */
+		
+		position: relative;
+	    /* height: 100vh;  Full screen height */
+		height: 70vh;
+		width: 100%;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    text-align: center;
+	    color: white;
+	    padding: 20px;
+	    box-sizing: border-box;
+	    transition: opacity 1s ease-in-out;
+		
+	}
+	.hero-image img {
+	    /*width: 100%;
+	    height: 100%;
+	    object-fit: cover; /* Pastikan gambar cover sepenuhnya */
+		
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	    opacity: 0;  
+	    transition: opacity 1s ease-in-out;
+	}
+	
+	.hero-image img.active {
+	    opacity: 1;
+	}
+	
+	.property-info {
+		
+		top: 31% ;/* Laraskan untuk overlap ke atas gambar */
+		
+		background: white;
+		padding:20px 50px;
+		border-radius: 5px;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+		z-index: 10;
+		position: absolute;
+	        
+	        }
+	
+	.property-info h1 {
+	            font-size: 36px;
+	    		font-weight: bold;
+	            margin-bottom: 10px;
+	        }
+	
+	.price {
+	            font-size: 24px;
+	            font-weight: bold;
+	            color: red;
+	        }
+	
+	.details {
+	            font-size: 14px;
+	            color: #666;
+	            margin-top: 5px;
+	        }
+	.property-details {
+	    display: flex;
+		padding:40px;
+	    gap: 50px;
+		
+	   /* align-items: flex-start;  Pastikan item sejajar atas */
+	}
+	.property-background {
+		 /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
+		background-color:white;
+		/*padding: 20px;*/
+	}
+	.text-section {
+	    flex: 2;
+		padding-top:50px;
+	}
+	
+	.text-section h1 {
+		padding-bottom: 10px;
+	    font-size: 33px;
+	    font-weight: bold;
+	}
+	
+	.text-section p {
+		text-align: justify;
+	    font-size: 16px;
+	    line-height: 1.6;
+	}
+		table {
+	    width: 100%;
+	    margin-top: 10px;
+	    border-collapse: collapse;
+	}
+	
+	table th, table td {
+	    padding: 10px;
+	    border-bottom: 1px solid #ddd;
+	    text-align: left;
+	}
+	
+	ul {
+	    list-style: none;
+	    padding: 10px;
+	}
+	
+	ul li {
+	    /*background: url('checkmark.png') no-repeat left center;*/
+	    background-size: 20px;
+	    padding-left: 5px;
+	    margin: 5px 0;
+	    font-size: 16px;
+	}
+	ul li i {
+		color: #002a43; /* Warna ikon */
+		margin-right: 10px; /* Jarak antara ikon & teks */
+		font-size: 18px; /* Saiz ikon */
+	}
+	
+	/* Container baru untuk galeri dan butang */
+	.gallery-container {
+	    flex: 1;
+	    display: flex;
+	    flex-direction: column; /* Susun galeri & butang secara menegak */
+	    align-items: flex-end; /* Pastikan ia berada di sebelah kanan */
+	    gap: 30px; /* Jarak antara galeri dan butang */
+	}
+	
+	
+	
+	
+	.gallery-section {
+	    display: grid;
+	    grid-template-columns: repeat(2, 1fr);
+	    gap: 10px;
+	    width: 100%;
+	}
+	
+	.gallery-section img {
+	    width: 100%;
+	    height: 100px;
+	    object-fit: cover;
+	    transition: transform 0.2s ease-in-out;
+	    cursor: pointer;
+	}
+	
+	.gallery-section img:hover {
+	    transform: scale(1.1);
+	}
+	
+	/* Modal Styling */
+	#imageModal {
+	    display: none; 
+	    position: fixed;
+	    z-index: 1000;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, 0.8);
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	
+	#imageModal img {
+	    max-width: 90%;
+	    max-height: 90%;
+	    border-radius: 8px;
+	}
+	
+	#imageModal .close {
+	    position: absolute;
+	    top: 10px;
+	    right: 20px;
+	    font-size: 30px;
+	    color: white;
+	    cursor: pointer;
+	}
+	
+	
+	
+	
+	
+	.button-wrapper {
+	    width: 100%;
+	    display: flex;
+	    justify-content: center; /* Tolak ke kanan */
+		gap: 20px;
+	}
+	
+	.button-wrapper button {
+	    background-color: #DAA520;
+		color: white;
+		padding: 13px 20px;
+		border: none;
+		font-size: 15px;
+		cursor: pointer;
+		text-transform: uppercase;
+		max-width: 100%;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+		width: 100%;
+	}
+	
+	.button-wrapper button:hover {
+	    background-color: grey;
+	}
+	
+	.button-wrapper a:hover  {
+		color: white;
+		text-decoration: none;
+	} 
+	
+	@media (max-width: 768px) {
+	    .button-wrapper {
+	       /*display:none; */
+	
+</style>
+
+<header>
+	<img id="logoAfr" src="https://hugeloop.onpay.my/media/uploads/LogoAFR2.png">
+	<button id="hamburger" class="md:hidden text-white text-2xl">
+		☰
+	</button>
+	<nav id="side-menu">
+		<button id="close-menu" class="absolute top-4 right-4 text-2xl">✖</button>
+		<ul>
+			<li>
+				<a href="https://afrproperty.onpay.my/order/form/afrproperty">Home</a>
+			</li>
+			<li>
+				<a href="https://afrproperty.onpay.my/order/form/aboutus">About Us</a>
+			</li>
+			<li>
+				<a href="https://afrproperty.onpay.my/order/form/subsale">Subsale</a>
+			</li>
+			<li>
+				<a href="https://afrproperty.onpay.my/order/form/newproject">New Projects</a>
+			</li>
+			<li>
+				<a href="https://afrproperty.onpay.my/order/form/feedback">Feedback</a>
+			</li>
+			<li>
+				<a href="https://afrproperty.onpay.my/order/form/contactus">Contact Us</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<div id="backdrop"></div>
+
+<iframe src="https://afrproperty.github.io/afrpropertyWebsite/SUBSALE-DICTYOALBASETIATROPIKA.html" width="100%" height="700px" style="border:none;"></iframe>
+
+
+<div id="imageModal" class="__web-inspector-hide-shortcut__">
+	<!--	<span class="close" onclick="closeModal()">×</span> -->
+	<img class="img-responsive-inline lazyloaded" id="fullImage">
+</div>
+
+<!-- Butang di bawah gallery -->
+<div class="button-wrapper">
+	<button>SCHEDULE A VIEWING</button>
+
+	<button>
+		<a href="https://afrproperty.onpay.my/order/form/subsale">
+			BACK TO LISTING
+		</a>
+	</button>
+</div>
+
+
+
+
+
+<footer class="new-footer bg-black text-white py-1">
+	<div class="mx-auto text-center">
+		<p>
+			<span style="font-size: 11px;">© 2025 </span>
+			<font color="#efc631"><b>
+					<span style="font-size: 11px;">AFR PROPERTY&nbsp;</span>
+				</b></font>
+			<span style="font-size: 11px;">| Visitor Count: 0</span>
+
+			<span style="font-size: 11px;">| Powered</span>
+			<span style="font-size: 11px;">by:</span>
+			<font color="#efc631"><b>
+					<span style="font-size: 11px;">Huge</span>
+					<span style="font-size: 11px;"> </span>
+					<span style="font-size: 11px;">Loop</span>
+				</b></font>
+		</p>
+	</div>
+</footer>
+<script>
+	document.querySelector(".container").style.maxWidth = "1200px !important";
+</script>
+
+<script>
+	fetch("https://github.com/afrproperty/afrpropertyWebsite/blob/main/SUBSALE-DICTYOALBASETIATROPIKA.html")
+	    .then(response =&gt; response.text())
+	    .then(data =&gt; {
+	      document.getElementById("html-content").innerHTML = data;
+	    })
+</script>
+<script>
+	if (!localStorage.getItem('visitorCount')) {
+	localStorage.setItem('visitorCount', 0);
+			}
+		
+			let visitorCount = parseInt(localStorage.getItem('visitorCount')) + 1;
+			localStorage.setItem('visitorCount', visitorCount);
+		
+			// Display the visitor count in the footer
+			document.getElementById('visitorCount').innerText = `Visitor Count: ${visitorCount}`;
+</script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+			       if (window.innerWidth &lt;= 768) { 
+			           let gallery = document.querySelector(".gallery-section");
+			           let textSection = document.querySelector(".text-section");
+			
+			           if (gallery &amp;&amp; textSection) {
+			               textSection.after(gallery); // Pindahkan gallery bawah text-section
+			               gallery.classList.add("moved"); // Tambah class moved untuk styling
+			           }
+			       }
+			   });
+			
+</script>
+
+<script>
+	// Image Slider
+		const images = document.querySelectorAll('.hero-image img');
+		let activeIndex = 0;
+	
+		setInterval(function() {
+			images[activeIndex].classList.remove('active');
+			activeIndex = (activeIndex + 1) % images.length;
+			images[activeIndex].classList.add('active');
+		}, 5000);  // Change every 5 seconds
+	
+</script>
+<script>
+	window.onload = function() {
+	        document.getElementById("imageModal").style.display = "none";
+	    };
+</script>
+<script>
+	function changeImage(imgElement) {
+	    var fullImage = document.getElementById("fullImage");
+	    var modal = document.getElementById("imageModal");
+	    
+	    fullImage.src = imgElement.src;
+	    modal.style.display = "flex";
+	}
+	
+	// Close modal when clicking the close button or outside the image
+	function closeModal() {
+	    document.getElementById("imageModal").style.display = "none";
+	}
+	
+	// Close modal when clicking outside the image
+	document.getElementById("imageModal").addEventListener("click", function(event) {
+	    if (event.target === this) {
+	        closeModal();
+	    }
+	});
+	
+	//Tutup Modal dengan Escape Key
+	 document.addEventListener("keydown", function(event) {
+	        if (event.key === "Escape") {
+	            closeModal();
+	        }
+	    });
+	
+</script>
+
+<script>
+	const sideMenu = document.getElementById('side-menu');
+	const backdrop = document.getElementById('backdrop');
+	const hamburger = document.getElementById('hamburger');
+	const closeMenu = document.getElementById('close-menu');
+	
+	// Open menu and show backdrop
+	hamburger.addEventListener('click', function () {
+	    sideMenu.classList.add('active');
+	    backdrop.style.opacity = "1";
+	    backdrop.style.visibility = "visible";
+	});
+	
+	// Close menu and hide backdrop
+	closeMenu.addEventListener('click', function () {
+	    sideMenu.classList.remove('active');
+	    backdrop.style.opacity = "0";
+	    backdrop.style.visibility = "hidden";
+	});
+	
+	// Close menu when clicking outside (on backdrop)
+	backdrop.addEventListener('click', function () {
+	    sideMenu.classList.remove('active');
+	    backdrop.style.opacity = "0";
+	    backdrop.style.visibility = "hidden";
+	});
+	
+</script>
