@@ -1,4 +1,4 @@
-<script>
+
   const projects = [
     {
       title: "Sanubari N13",
@@ -89,4 +89,4 @@
   });
 
   renderProjects(); // initial render
-</script>
+
