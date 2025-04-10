@@ -1,0 +1,532 @@
+	html {
+		scroll-behavior: smooth;
+	}
+	@media (min-width: 1024px) {
+	    body .container {
+	        max-width: min(1920px, 100%);
+	    }
+	}
+	
+	html, body {
+	    overflow-x: hidden !important; /* Prevents horizontal scrolling */
+	    width: 100%;
+	}
+	
+	
+	* {
+			/*margin-top:0!important; */
+			box-sizing: border-box;
+			
+		}
+	body {
+		
+		margin: 0!important;
+		padding: 0!important;
+		width: 100%!important;
+		height: 100%!important;
+	    font-family: Roboto, sans-serif;
+		
+	}
+	body.embed {
+	    background-color: transparent !important;
+	    background-image: none !important;
+	}
+	
+	.container div {
+	    margin-top: 0px !important;
+		margin-bottom: 0px !important;
+	}
+	
+	.container, #content, #form, .wrapper, .content-wrapper {
+	    margin: 0 !important;
+	    padding: 0 !important;
+		width:100%;
+	   	max-width: 100% !important;
+	    height: auto !important;
+	    box-shadow: none !important;
+	    background: transparent !important;
+	}
+	
+	header {
+		position: fixed; 
+		/*position: sticky; */
+		top: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px;
+		background: #002A43; /* Warna asal header */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		z-index: 1000; /* Ensure it stays on top */
+		width:102%;  
+		/*width:100%;*/
+		
+	}
+	
+	
+	nav ul {
+	    list-style: none;
+	    display: flex;
+	    gap: 45px;
+	    margin-right: 20px;
+	
+	}
+	nav a {
+		text-decoration: none !important; /* Removes the underline */
+		color: white;
+		font-weight: bold;
+		/*margin-right: 20px; */
+		transition: color 0.3s ease; /* Smooth transition for hover effect */
+	}
+	
+	/* Change color of nav links on hover */
+	nav a:hover {
+		color: #b88917; /* Hover color */
+		text-decoration: none !important;
+	}
+	
+	/* Style the hamburger button */
+	#hamburger {
+	    background: transparent;
+	    border: none;
+	    font-size: 30px;
+	    cursor: pointer;
+	    display: none; /* Hide by default */
+	}
+	
+	#logoAfr {
+	    color: black;
+	    width: 64px;
+	    height: 58px;
+	    /*margin-left: 20px; */
+		margin-left: 12px;
+	}
+	
+	/* Display hamburger button only on mobile (smaller than 768px) */
+	@media (max-width: 768px) {
+	    header {
+	        justify-content: space-between;
+	       /* position: relative;  Make sure elements inside position correctly */
+			width:104%; 
+	    }
+		header {
+	         /* flex-direction: column; */
+	        align-items: center;
+	        text-align: center;
+	    }
+	
+	    #hamburger {
+	        display: block; /* Show hamburger button */
+			margin-left: auto; 
+			margin-right: 12px;
+	    }
+		
+		nav ul {
+	        flex-direction: column;
+	        gap: 30px;
+			padding: 20px;
+			font-size: medium;
+			text-transform: uppercase;
+			margin-top: 25px;
+			margin-right: 0px;
+	    }	  
+		
+		nav ul li{
+			display: block;
+	        text-align: center;
+	    }	    
+	}
+	
+	@media (max-width: 768px) {
+	    #side-menu {
+	        position: fixed;
+	        top: 0;
+	        right: -100%;  /* Initially off-screen */
+	        width: 250px; /* Adjust as needed */
+	        height: 100%;
+	        background-color: #002A43;
+			color: white;
+	        transition: left 0.3s ease-in-out; /* Smooth animation */
+	        z-index: 1000; /* Ensure it stays on top */
+			padding: 20px;
+			background: rgba(0, 42, 67, 0.7);
+	    }
+	
+	    #side-menu.active {
+	        right: 0; /* Slide in from the left */
+	    }
+	
+	    /* Add styles for the hamburger icon as needed */
+	    #menu-toggle {
+	        /* ... */
+	    }
+		
+		#close-menu {
+			background: none;
+			border: none;
+			color: white;
+			font-size: 24px;
+			cursor: pointer;
+			padding-top: 23px;
+			padding-right: 6px;
+		}
+	
+	}
+	
+	#backdrop {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+	    backdrop-filter: blur(5px); /* Blur effect */
+	    opacity: 0;
+	    visibility: hidden;
+	    transition: opacity 0.3s ease-in-out;
+	    z-index: 999; /* Make sure it's below the menu but above other content */
+	}
+	
+	/* Show the backdrop when the menu is active */
+	#side-menu.active + #backdrop {
+	    opacity: 1;
+	    visibility: visible;
+	}
+	
+	/* Display hamburger button only on mobile (smaller than 768px) */
+	@media (max-width: 991px) {
+		/* Ensure header items are spaced correctly on mobile */
+		
+		
+		 .hero-image {
+			width: 100%;
+			height: 300px; /* Sesuaikan ketinggian */
+			position: relative;
+			overflow: hidden;
+		}
+		.hero-image img {
+			 	width: 100%;
+				height: 100%;
+				object-fit: cover;
+		}
+		
+		.property-details{
+			    flex-direction: column;
+				padding:0px!important;
+				gap: 10px !important;
+		}
+		
+		
+		 .property-info {
+			
+				position: relative !important;
+				width: 100%;
+			 
+			
+	    	}
+			
+			.property-infobckg{
+				
+				margin-bottom: 20px;
+				
+			}
+			
+	
+			.details span {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+		
+			.gallery-container{
+				padding: 10px 20px;
+				width:90% !important;
+			}
+	      
+			.gallery-section {
+			  
+				 order: -1; /* Naikkan gallery ke atas */
+			}
+	
+			.gallery-section img {
+				width: 100%;
+				height: 120px;
+				object-fit: cover;
+				transition: transform 0.2s ease-in-out;
+			}
+	
+			.gallery-section img:hover {
+				transform: scale(1.05);
+			}
+		
+		
+	        .text-section {
+				order: 0; /* Pastikan Property Description di tengah */
+	            padding-top: 0px !important;
+	            background-color: white;
+	        }
+		  	.text-section h1 {
+				text-align: center;
+				margin:15px;
+			}
+		 	.button-wrapper {
+				order:1;
+				justify-content: center !important;
+			}
+		
+			.button-wrapper button {
+				padding: 15px 15px !important;
+			}
+	}
+	
+	body {
+	    font-family: Arial, sans-serif;
+	    margin: 0;
+	    padding: 0;
+	    background-color: #041e2e;
+	}
+	
+	.property-container {
+	        display: flex;
+			flex-direction: column;
+			align-items: center;
+			max-width: 90%;
+			margin: auto;
+			background: white;
+			padding: 20px;
+			border-radius: 10px;
+			
+	}
+	.hero-image {
+	   	
+		position: relative;
+	    /* height: 100vh;  Full screen height */
+		height: 70vh;
+		width: 100%;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    text-align: center;
+	    color: white;
+	    padding: 20px;
+	    box-sizing: border-box;
+	    transition: opacity 1s ease-in-out;
+		
+	}
+	.hero-image img {
+	    
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	    opacity: 0;  
+	    transition: opacity 1s ease-in-out;
+	}
+	
+	.hero-image img.active {
+	    opacity: 1;
+	}
+	
+	.property-info {
+		
+		background: white;
+		border-radius: 5px;
+		z-index: 10;
+	 }
+	
+	.property-infobckg{
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+		background: white;
+		padding:20px;
+		margin-top: -80px;
+		position: relative;
+	    z-index: 11;
+	}
+	
+	.property-info h1 {
+	           font-family: 'Playfair Display', serif;
+				font-size: 28px;
+				font-weight: 900;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				color: #0a1a2f;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+	}
+	
+	.price {
+	            font-size: 22px;
+				font-weight: 700;
+				color: #c21807;
+	        }
+	
+	.details {
+	            font-family: 'Poppins', sans-serif;
+				font-size: 13px;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: #777;
+	        }
+	
+	.property-details {
+	    display: flex;
+		padding-top: 20px;
+	    gap: 50px;
+		
+	   /* align-items: flex-start;  Pastikan item sejajar atas */
+	}
+	.property-background {
+		 /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
+		background-color:white;
+		/*padding: 20px;*/
+	}
+	.text-section {
+	    flex: 2;
+		padding-top:30px;
+	}
+	
+	.text-section h1 {
+		    margin-top: 15px;
+		 	margin-bottom:15px;
+			font-size: 24px;
+			font-weight: 800;
+			font-family: 'Poppins', sans-serif;
+			text-transform: uppercase;
+			color: #1e1e2f; /* warna gelap elegan */
+			letter-spacing: 2px;
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	}
+	
+	.text-section p {
+		font-family: 'Poppins', sans-serif;
+		font-size: 14px;
+		line-height: 1.7;
+		color: #333;
+		text-align:justify;
+	}
+		table {
+	    width: 100%;
+	    margin-top: 10px;
+	    border-collapse: collapse;
+	}
+	
+	table th, table td {
+	    padding: 10px;
+	    border-bottom: 1px solid #ddd;
+	    text-align: left;
+		font-family: 'Poppins', sans-serif;
+	}
+	
+	ul {
+	    list-style: none;
+	}
+	
+	ul li {
+	    /*background: url('checkmark.png') no-repeat left center;*/
+	    background-size: 20px;
+	    padding-left: 5px;
+	    margin: 5px 0;
+	    font-size: 14px;
+		font-family: 'Poppins', sans-serif;
+	}
+	ul li i {
+		color: #002a43; /* Warna ikon */
+		margin-right: 10px; /* Jarak antara ikon & teks */
+		font-size: 18px; /* Saiz ikon */
+	}
+	
+	/* Container baru untuk galeri dan butang */
+	.gallery-container {
+	    display: flex;
+	    flex-direction: column; /* Susun galeri & butang secara menegak */
+	    gap: 30px; /* Jarak antara galeri dan butang */
+	    margin: 25px;
+		width: 50%;
+	}
+	
+	.gallery-section {
+	    display: grid;
+	    grid-template-columns: repeat(2, 1fr);
+	    gap: 10px;
+	    width: 100%;
+	}
+	
+	.gallery-section img {
+	    width: 100%;
+	    height: 100px;
+	    object-fit: cover;
+	    transition: transform 0.2s ease-in-out;
+	    cursor: pointer;
+	}
+	
+	.gallery-section img:hover {
+	    transform: scale(1.1);
+	}
+	
+	/* Modal Styling */
+	#imageModal {
+	    display: none; 
+	    position: fixed;
+	    z-index: 1000;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-color: rgba(0, 0, 0, 0.8);
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	
+	#imageModal img {
+	    max-width: 90%;
+	    max-height: 90%;
+	    border-radius: 8px;
+	}
+	
+	#imageModal .close {
+	    position: absolute;
+	    top: 10px;
+	    right: 20px;
+	    font-size: 30px;
+	    color: white;
+	    cursor: pointer;
+	}
+	
+	.button-wrapper {
+	    width: 100%;
+	    display: flex;
+	    justify-content: center; /* Tolak ke kanan */
+		gap: 20px;
+	}
+	
+	.button-wrapper button {
+	        background-color: #DAA520;
+			color: white;
+			padding: 25px;
+			border: none;
+			cursor: pointer;
+			text-transform: uppercase;
+			max-width: 100%;
+			height: 100%;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+			width: 100%;
+	}
+	
+	.button-wrapper button:hover {
+	    background-color: grey;
+	}
+	
+	.button-wrapper a{
+		
+	    font-weight: 600;
+	    font-family: 'Arial', sans-serif;
+	}
+	.button-wrapper a:hover  {
+		color: white;
+		text-decoration: none;
+		
+	} 
+	
