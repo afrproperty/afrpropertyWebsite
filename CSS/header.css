@@ -1,0 +1,147 @@
+header.css
+
+
+header {
+		position: fixed; 
+		/*position: sticky; */
+		top: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px;
+		background: #002A43; /* Warna asal header */
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		z-index: 1000; /* Ensure it stays on top */
+		width:102%;  
+		/*width:100%;*/
+		
+	}
+	
+	nav ul {
+	    list-style: none;
+	    display: flex;
+	    gap: 45px;
+	    margin-right: 20px;
+	
+	}
+	nav a {
+		text-decoration: none !important; /* Removes the underline */
+		color: white;
+		font-weight: bold;
+		/*margin-right: 20px; */
+		transition: color 0.3s ease; /* Smooth transition for hover effect */
+	}
+	
+	/* Change color of nav links on hover */
+	nav a:hover {
+		color: #b88917; /* Hover color */
+		text-decoration: none !important;
+	}
+	
+	/* Style the hamburger button */
+	#hamburger {
+	    background: transparent;
+	    border: none;
+	    font-size: 30px;
+	    cursor: pointer;
+	    display: none; /* Hide by default */
+	}
+	
+	#logoAfr {
+	    color: black;
+	    width: 64px;
+	    height: 58px;
+	    /*margin-left: 20px; */
+		margin-left: 12px;
+	}
+	
+	/* Display hamburger button only on mobile (smaller than 768px) */
+	@media (max-width: 768px) {
+	    header {
+	        justify-content: space-between;
+	       /* position: relative;  Make sure elements inside position correctly */
+			width:104%; 
+	    }
+		header {
+	         /* flex-direction: column; */
+	        align-items: center;
+	        text-align: center;
+	    }
+	
+	    #hamburger {
+	        display: block; /* Show hamburger button */
+			margin-left: auto; 
+			margin-right: 12px;
+	    }
+		
+		nav ul {
+	        flex-direction: column;
+	        gap: 30px;
+			padding: 20px;
+			font-size: medium;
+			text-transform: uppercase;
+			margin-top: 25px;
+			margin-right: 0px;
+	    }	  
+		
+		nav ul li{
+			display: block;
+	        text-align: center;
+	    }	    
+	}
+	
+	@media (max-width: 768px) {
+	    #side-menu {
+	        position: fixed;
+	        top: 0;
+	        right: -100%;  /* Initially off-screen */
+	        width: 250px; /* Adjust as needed */
+	        height: 100%;
+	        background-color: #002A43;
+			color: white;
+	        transition: left 0.3s ease-in-out; /* Smooth animation */
+	        z-index: 1000; /* Ensure it stays on top */
+			padding: 20px;
+			background: rgba(0, 42, 67, 0.7);
+	    }
+	
+	    #side-menu.active {
+	        right: 0; /* Slide in from the left */
+	    }
+	
+	    /* Add styles for the hamburger icon as needed */
+	    #menu-toggle {
+	        /* ... */
+	    }
+		
+		#close-menu {
+			background: none;
+			border: none;
+			color: white;
+			font-size: 24px;
+			cursor: pointer;
+			padding-top: 23px;
+			padding-right: 6px;
+		}
+	
+	}
+	
+	#backdrop {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+	    backdrop-filter: blur(5px); /* Blur effect */
+	    opacity: 0;
+	    visibility: hidden;
+	    transition: opacity 0.3s ease-in-out;
+	    z-index: 999; /* Make sure it's below the menu but above other content */
+	}
+	
+	/* Show the backdrop when the menu is active */
+	#side-menu.active + #backdrop {
+	    opacity: 1;
+	    visibility: visible;
+	}
