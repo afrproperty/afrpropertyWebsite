@@ -1,0 +1,48 @@
+html {
+		scroll-behavior: smooth;
+	}
+	@media (min-width: 1024px) {
+	    body .container {
+	        max-width: min(1920px, 100%);
+	    }
+	}
+	
+	html, body {
+	    overflow-x: hidden !important; /* Prevents horizontal scrolling */
+	    width: 100%;
+	}
+	
+	
+	* {
+			/*margin-top:0!important; */
+			box-sizing: border-box;
+			
+		}
+	body {
+		
+		margin: 0!important;
+		padding: 0!important;
+		width: 100%!important;
+		height: 100%!important;
+	    font-family: Roboto, sans-serif;
+		
+	}
+	body.embed {
+	    background-color: transparent !important;
+	    background-image: none !important;
+	}
+	
+	.container div {
+	    margin-top: 0px !important;
+		margin-bottom: 0px !important;
+	}
+	
+	.container, #content, #form, .wrapper, .content-wrapper {
+	    margin: 0 !important;
+	    padding: 0 !important;
+		width:100%;
+	   	max-width: 100% !important;
+	    height: auto !important;
+	    box-shadow: none !important;
+	    background: transparent !important;
+	}
