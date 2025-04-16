@@ -1,0 +1,416 @@
+.wholewrapper {
+	  	max-width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	
+	
+	
+	.main-img {
+			padding-top: 20px;
+		  	position: relative;
+		  	border-radius: 15px;
+		  	overflow: hidden;
+		  	display: flex;
+		  	justify-content: center;  /* center horizontal */
+		}
+	
+	.main-img img {
+	     width: 100%;
+		 max-width: 1000px;
+		 height: auto;
+		 border-radius: 15px;
+	}
+	
+	.label {
+		  position: absolute;
+		  top: 15px;
+		  left: 15px;
+		  background: #003c9e;
+		  padding: 6px 12px;
+		  font-size: 12px;
+		  font-weight: bold;
+		  border-radius: 5px;
+		  z-index: 10;
+		  color: white;
+		}
+	
+		/* Responsive tweak utk skrin medium & besar */
+		@media (min-width: 768px) {
+		  .label {
+			font-size: 14px;
+			padding: 8px 16px;
+		  }
+		}
+	
+		@media (min-width: 1030px) {
+		  .label {
+			font-size: 14px;
+			padding: 8px 16px;
+			left: 20% !important;
+		  }
+		}
+	
+		@media (max-width: 1000px) {
+		  .Textsection,
+		  .Textsection2,
+		  .map {
+			margin-left: 10px !important;
+			margin-right: 10px !important;
+		  }
+	
+		  .property-details {
+			padding: 20px 10px !important;
+			  gap:10px !important;
+			  flex-direction:column !important;
+		  }
+		 .rightside{
+			 width:100% !important;
+			}
+		 .calcsection{
+			width:90% !important;
+			}
+		}
+	
+	.thumbs {
+	  display: flex;
+	  gap: 10px;
+	  padding: 15px;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+	
+	.thumbs img {
+	  width: 100px;
+	  height: 70px;
+	  object-fit: cover;
+	  border-radius: 10px;
+	  cursor: pointer;
+	  opacity: 0.6;
+	  transition: opacity 0.3s ease;
+	}
+	
+	.thumbs img.active, .thumbs img:hover {
+	  opacity: 1;
+	  border: 2px solid #00c6ff;
+	}
+	
+	.property-details {
+			display: flex;
+			flex-direction:row;
+			justify-content: center;
+			gap: 30px;
+			padding: 40px 20px;
+		}
+	
+		
+	
+	.Textsection{
+		    background-color: white;
+		  border-radius: 5px;
+		  padding: 30px 25px 40px 25px;
+		  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+		  width:50%;
+		  margin: 30px;
+		   font-family: 'Playfair Display', serif;
+		  color: #f8f9fa;
+	   
+	}
+		.Textsection h1 {
+			 	font-family: 'Playfair Display', serif;
+			    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+			    font-weight: 700;
+			    text-align: center;
+			    text-transform: uppercase;
+			    color: #DAA520;
+				padding-top: 0px;
+				color: black;
+				font-size:22px;
+			
+			
+		}
+	
+		.Textsection p{
+			font-family: 'Playfair Display', serif;
+			line-height:1.6; 
+			font-size:15px;
+			padding-top: 15px;
+			padding-bottom:20px;
+			color:black;
+			text-align:center;
+	
+		}
+	
+		.rightside{
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+			max-width: 100%;
+			width:50%
+		}
+	
+		.calcsection{
+		  background-color: white;
+		  border-radius: 5px;
+		  padding: 30px 25px 40px 25px;
+		  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+		  width:80%;
+		  height:50%;
+		  margin: 20px auto;
+		  font-family: 'Playfair Display', serif;
+		  color: #f8f9fa;
+	   
+	}
+		.calcsection h1 {
+			 	font-family: 'Playfair Display', serif;
+			    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+			    font-weight: 700;
+			    text-align: center;
+			    text-transform: uppercase;
+			    color: #DAA520;
+				padding-top: 0px;
+				color: black;
+				font-size:22px;
+				padding-bottom:15px;
+			
+			
+		}
+	
+	.calcsection input{
+		color:black;
+	}
+	
+		@keyframes pulseZoom {
+		  0%, 100% {
+			transform: scale(1);
+		  }
+		  50% {
+			transform: scale(1.05);
+		  }
+		}
+	
+	
+			.Textsection2 {
+			background-color: #1e293b;
+		  border-radius: 5px;
+		  padding: 30px 25px 40px 25px;
+		  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+		  width:80%;
+		  height: 50%;
+		  margin: 30px auto 0px;
+		  animation: pulseZoom 2s infinite ease-in-out;
+		   font-family: 'Playfair Display', serif;
+		  color: #f8f9fa;
+		}
+	
+		.Textsection2 h2 {
+			font-family: 'Playfair Display', serif;
+			    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+			    font-weight: 700;
+			    text-align: center;
+			    text-transform: uppercase;
+			    color: #DAA520;
+				padding-top: 0px;
+				padding-bottom:10px;
+				color: #ffffff;
+				font-size:22px;
+		}
+	
+		.Textsection2 ul2 {
+			list-style:none;
+			
+		
+		}
+	
+	ul2 li {
+	  	
+		list-style:none; 
+		padding:5px;
+		line-height:1.8; 
+		font-size:15px;
+		color: white;
+		text-align:center;
+	}
+	
+	
+	 .result {
+	            margin-top: 20px;
+	            padding: 15px;
+	            background: white;
+	            border-radius: 5px;
+	        }
+	
+	  .result p {
+	            display: flex;
+		  		color:black;
+	            justify-content: space-between;
+	            border-bottom: 1px solid #ccc;
+	            padding: 8px 0;
+	        }
+	
+	.resulth2{
+		font-family: 'Playfair Display', serif;
+			    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+			    font-weight: 700;
+			    text-align: center;
+			    text-transform: uppercase;
+				padding-bottom:10px;
+				font-size:22px;
+				color:black;
+	}
+	
+	/* Responsif: Susun ke bawah bila skrin kecil */
+		@media (max-width: 991px) {
+			.Textsection {
+				margin: 10px !important;
+				padding: 20px;
+				width: 95%;
+			}
+			.Textsection2{
+				margin: 10px !important;
+				padding: 20px;
+				width: 95%;
+			}
+			
+			.map img{
+						width: 90%;
+						height: 90%;
+						max-height: 80vh;
+			}
+		}
+	
+	.map{
+			position: relative;
+			justify-content: center;
+			margin:0px 50px 30px 50px;
+		    display: flex;
+	    	justify-content: center;
+		
+	}
+	
+	.map img{
+		   		width: 70%;
+	    		height: 90%;
+	    		max-height: 80vh;
+	}
+	
+	
+	ul li {
+	  	padding-bottom: 8px;
+		list-style:none; 
+		padding:5px;
+		line-height:1.8; 
+		font-size:15px;
+		color: black;
+		text-align:center;
+	}
+	
+	footer {
+	  text-align: center;
+	  color: #aaa;
+	  font-size: 13px;
+	  padding-top: 40px;
+	}
+	
+	 .center-button-container {
+	      display: flex;
+	      justify-content: center; /* Menyusun butang secara mendatar */
+	      align-items: center; /* Menyusun butang secara menegak */
+	      height: 20vh; /* Menetapkan ketinggian penuh skrin */
+	      margin: 0; /* Mengelakkan margin yang tidak perlu */
+	    }
+	
+	.mortgage-button {
+	      background-color: #002a43;
+	      color: white;
+	      padding: 2.3rem 2.1rem; /* Set padding kiri/kanan dan atas/bawah */
+	      border-radius: 9999px; /* Rounded full */
+	      font-weight: 600; /* Font semibold */
+	    	  font-size: 30px;
+	      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+	      transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition effect */
+	    }
+	
+	    .mortgage-button:hover {
+	      background-color: #002a43; /* Hover yellow color */
+	      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+	    }
+	
+	.button-wrapper {
+	    max-width: 100%;
+	    display: flex;
+	    justify-content: center; /* Tolak ke kanan */
+		gap: 20px;
+		padding: 20px;
+	
+	}
+	
+	.button-wrapper button {
+	    background-color: #DAA520;
+		color: white;
+		padding: 13px 20px;
+		border: none;
+		font-family: 'Playfair Display', serif;
+		font-size: 14px;
+		cursor: pointer;
+		text-transform: uppercase;
+		max-width: 100%;
+		box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+		width: 100%;
+	}
+	
+	.button-wrapper button:hover {
+	    background-color: grey;
+	}
+	
+	@media (max-width: 768px) {
+	    .button-wrapper {
+			/*display:none; */}
+	}
+	
+	.button-container {
+		display: flex;
+		justify-content: center;  
+		gap: 5px;  /* Jarak antara butang */
+	}
+	
+	.btn-calculate, .btn-reset {
+		padding: 10px 15px;
+		font-size: 14px;
+		border-radius: 5px;
+		border: none;
+		cursor: pointer;
+		margin:10px;
+	}
+	
+	.btn-calculate {
+		background-color: #DAA520;
+		color: white;
+	}
+	
+	.btn-calculate:hover {
+		background-color: #D1953A;
+	}
+	
+	.btn-reset {
+		background-color: #013059;
+		color: white;
+	}
+	
+	.btn-reset:hover {
+		background-color: #D1953A;
+	}
+	
+	@media (min-width: 768px) {
+			.container {
+				max-width: 100%;
+			}
+		}
+	
+	
+		@media (min-width: 640px) {
+			.container {
+				max-width: 100%;
+			}
+		}
