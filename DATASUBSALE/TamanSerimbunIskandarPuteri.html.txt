@@ -1,0 +1,88 @@
+﻿<section class="hero-image" id="hero-image">
+
+
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri1.jpg" class="active">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri2.jpg">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri3.jpg">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri4.jpg">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri5.jpg">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri6.jpg">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri7.jpg">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri8.jpg">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri9.jpg">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri10.jpg">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri11.jpg">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri12.jpg">
+</section>
+
+
+<div class="property-details">
+
+
+<section class="property-info">
+<section class="property-infobckg">
+<h1>TAMAN SERIMBUN ISKANDAR PUTERI</h1>
+<div class="details">DOUBLE STOREY ENDLOT WITH EXTRA LAND</div>
+<div class="price">RM 1,150,000</div>
+<div class="details">
+        <i class="fa-solid fa-bed"></i> 4+1 BEDROOMS
+        <i class="fa-solid fa-bath"></i> 3 BATHROOMS  
+        <i class="fa-solid fa-ruler-combined"></i> 1,882 SQFT 
+</div>
+</section>
+
+
+<div class="text-section">
+<div class="property-background">
+        <h1>Property Description</h1>
+<p>
+This stunning double storey end lot in Taman Serimbun offers the perfect blend of space, style, and serenity.
+</p>
+<br>
+<h1>Overview</h1>
+<table>
+<tbody>
+<tr>
+        
+________________
+<th>Property Type</th>
+        <td>Double Storey End Lot with Extra Land</td>
+</tr>
+<tr>
+        <th>Location</th>
+        <td>Taman Serimbun, Iskandar Puteri</td>
+</tr>
+<tr>
+        <th>House Dimensions</th>
+        <td>20 ft x 70 ft + 6.8 ft extra land</td>
+</tr>
+<tr>
+        <th>Lot status</th>
+        <td>Bumi Lot (Non-Bumi Can Purchase)</td>
+</tr>
+</tbody>
+</table>
+<br>
+        <h1>Property Features &amp; Amenities</h1>
+<ul>
+<li><i class="fas fa-shield-alt"></i> Gated &amp; Guarded community</li>
+<li><i class="fas fa-compass"></i> Facing North East</li>
+<li><i class="fas fa-school"></i> Primary and Secondary Schools</li>
+<li><i class="fas fa-shopping-cart"></i> AEON Dato Onn, Econsave Taman Daya</li>
+<li><i class="fas fa-mosque"></i> Sultan Iskandar Mosque</li>
+<li><i class="fas fa-university"></i> International College, KPJ Bandar Dato Onn</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<div class="gallery-container">
+<div class="gallery-section">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri1.jpg" alt="PropertyImage" onclick="changeImage(this)">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri3.jpg" alt="PropertyImage" onclick="changeImage(this)">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri4.jpg" alt="PropertyImage" onclick="changeImage(this)">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri5.jpg" alt="PropertyImage" onclick="changeImage(this)">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri6.jpg" alt="PropertyImage" onclick="changeImage(this)">
+<img src="https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri7.jpg" alt="PropertyImage" onclick="changeImage(this)">
+</div>
