@@ -1,5 +1,12 @@
 const properties = [
     {    
+         img: "https://afrproperty.onpay.my/media/uploads/photo_1_2025-09-05_23-42-54.jpg", 
+         price: "RM 668,000", 
+         address: "Jalan Seri Austin @ Taman Seri  Austin", 
+         details: "4 Beds | 3 Baths | 1,882 SQFT", 
+         link: "https://www.afrproperty.com/order/form/subsale-tamanseriaustin" 
+    },
+    {    
          img: "https://afrproperty.onpay.my/media/uploads/SetiaIndah5.jpg", 
          price: "RM 1,600,000", 
          address: "Jalan Setia 5 @ Taman Setia Indah", 
@@ -121,3 +128,4 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
