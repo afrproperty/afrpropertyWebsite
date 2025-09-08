@@ -7,11 +7,11 @@ const properties = [
          link: "https://www.afrproperty.com/order/form/subsale-tamanseriaustin" 
     },
     {    
-         img: "https://afrproperty.onpay.my/media/uploads/SetiaIndah5.jpg", 
-         price: "RM 1,600,000", 
-         address: "Jalan Setia 5 @ Taman Setia Indah", 
-         details: "6 Beds | 5 Baths | 6,100 SQFT", 
-         link: "https://afrproperty.onpay.my/order/form/subsale-setiaindah" 
+        img: "https://afrproperty.onpay.my/media/uploads/DesaPalma1.jpg", 
+        price: "RM 3,000,000", 
+        address: "Desa Palma @ Nasa City", 
+        details: "6 Beds | 6 Baths | 3,200 SQFT", 
+        link: "https://afrproperty.onpay.my/order/form/subsale-desapalmanasacity" 
     },
     {
         img: "https://afrproperty.onpay.my/media/uploads/SetiaTropika.jpg", 
@@ -28,11 +28,11 @@ const properties = [
         link: "https://afrproperty.onpay.my/order/form/subsale-sripulaiperdana" 
     },
     { 
-        img: "https://afrproperty.onpay.my/media/uploads/DesaPalma1.jpg", 
-        price: "RM 3,000,000", 
-        address: "Desa Palma @ Nasa City", 
-        details: "6 Beds | 6 Baths | 3,200 SQFT", 
-        link: "https://afrproperty.onpay.my/order/form/subsale-desapalmanasacity" 
+         img: "https://afrproperty.onpay.my/media/uploads/SetiaIndah5.jpg", 
+         price: "RM 1,600,000", 
+         address: "Jalan Setia 5 @ Taman Setia Indah", 
+         details: "6 Beds | 5 Baths | 6,100 SQFT", 
+         link: "https://afrproperty.onpay.my/order/form/subsale-setiaindah" 
     },
     { 
         img: "https://afrproperty.onpay.my/media/uploads/CountryGardenCentralPark1.jpg", 
@@ -128,4 +128,5 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
 
