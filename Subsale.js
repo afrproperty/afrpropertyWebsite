@@ -1,24 +1,24 @@
 const properties = [
     {    
+         img: "https://afrproperty.onpay.my/media/uploads/RINI8 (1).jpg", 
+         price: "RM 1,300,000", 
+         address: "Rini Homes 8 @ Taman Mutiara Rini", 
+         details: "4 Beds | 4 Baths | 4,876 SQFT", 
+         link: "https://www.afrproperty.com/order/form/subsale-rinihomes8tamanmutiararini" 
+    },
+    {    
          img: "https://afrproperty.onpay.my/media/uploads/photo_1_2025-09-05_23-42-54.jpg", 
          price: "RM 668,000", 
          address: "Jalan Seri Austin @ Taman Seri  Austin", 
          details: "4 Beds | 3 Baths | 1,882 SQFT", 
          link: "https://www.afrproperty.com/order/form/subsale-tamanseriaustin" 
     },
-    {    
+    {
         img: "https://afrproperty.onpay.my/media/uploads/DesaPalma1.jpg", 
         price: "RM 3,000,000", 
         address: "Desa Palma @ Nasa City", 
         details: "6 Beds | 6 Baths | 3,200 SQFT", 
         link: "https://afrproperty.onpay.my/order/form/subsale-desapalmanasacity" 
-    },
-    {
-        img: "https://afrproperty.onpay.my/media/uploads/SetiaTropika.jpg", 
-        price: "RM 1,200,000", 
-        address: "Dictyo Alba Setia Tropika", 
-        details: "4 Beds | 3 Baths | 3,509 SQFT", 
-        link: "https://afrproperty.onpay.my/order/form/subsale-dictyoalbasetiatropika" 
     },
     { 
         img: "https://afrproperty.onpay.my/media/uploads/FairwaysPulaiPerdana.jpg", 
@@ -128,5 +128,6 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
 
 
