@@ -1,7 +1,7 @@
 const properties = [
     {    
          img: "https://afrproperty.onpay.my/media/uploads/RINI8 (1).jpg", 
-         price: "RM 1,300,000", 
+         price: "RM 1,388,000", 
          address: "Rini Homes 8 @ Taman Mutiara Rini", 
          details: "4 Beds | 4 Baths | 4,876 SQFT", 
          link: "https://www.afrproperty.com/order/form/subsale-rinihomes8tamanmutiararini" 
@@ -128,6 +128,7 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
 
 
 
