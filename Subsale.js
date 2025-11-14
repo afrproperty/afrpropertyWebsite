@@ -1,5 +1,12 @@
 const properties = [
     {    
+         img: "https://afrproperty.onpay.my/media/uploads/NUSA IDAMAN (1).jpg", 
+         price: "RM 920,000", 
+         address: "Precint 3 @ Nusa Idaman", 
+         details: "4 Beds | 3 Baths | 3,400 SQFT", 
+         link: "https://www.afrproperty.com/order/form/subsale-precint3nusaidaman" 
+    },
+    {    
          img: "https://afrproperty.onpay.my/media/uploads/RINI8 (1).jpg", 
          price: "RM 1,388,000", 
          address: "Rini Homes 8 @ Taman Mutiara Rini", 
@@ -128,6 +135,7 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
 
 
 
