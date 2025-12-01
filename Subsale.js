@@ -81,7 +81,7 @@ const properties = [
         address: "Residence at The Peak", 
         details: "6+1 Beds | 7 Baths | 7,916 SQFT", 
         link: "https://afrproperty.onpay.my/order/form/subsale-residencethepeak" 
-    },
+    }
 ];
 
 
@@ -135,6 +135,7 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
 
 
 
