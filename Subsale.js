@@ -5,7 +5,7 @@ const properties = [
         address: "Kent Eco Spring @ Eko Flora", 
         details: "4+1 Beds | 6 Baths | 4,800 SQFT", 
         link: "https://www.afrproperty.com/order/form/subsale-kentecospringekoflora" 
-    }
+    },
     {    
          img: "https://afrproperty.onpay.my/media/uploads/NUSA IDAMAN (1).jpg", 
          price: "RM 920,000", 
@@ -135,6 +135,7 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
 
 
 
