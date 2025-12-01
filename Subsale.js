@@ -83,7 +83,6 @@ const properties = [
         link: "https://afrproperty.onpay.my/order/form/subsale-residencethepeak" 
     },
 ];
-];
 
 
 const itemsPerPage = 6;
@@ -136,6 +135,7 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
 
 
 
