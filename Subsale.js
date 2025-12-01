@@ -1,4 +1,11 @@
 const properties = [
+    { 
+        img: "https://afrproperty.onpay.my/media/uploads/KENT ECO SPRING (1).jpg", 
+        price: "RM 3,200,000", 
+        address: "Kent Eco Spring @ Eko Flora", 
+        details: "4+1 Beds | 6 Baths | 4,800 SQFT", 
+        link: "https://www.afrproperty.com/order/form/subsale-kentecospringekoflora" 
+    }
     {    
          img: "https://afrproperty.onpay.my/media/uploads/NUSA IDAMAN (1).jpg", 
          price: "RM 920,000", 
@@ -75,13 +82,7 @@ const properties = [
         details: "6+1 Beds | 7 Baths | 7,916 SQFT", 
         link: "https://afrproperty.onpay.my/order/form/subsale-residencethepeak" 
     },
-    { 
-        img: "https://afrproperty.onpay.my/media/uploads/TamanSerimbunIskandarPuteri1.jpg", 
-        price: "RM 1,150,000", 
-        address: "Taman Serimbun, Iskandar Puteri", 
-        details: "4+1 Beds | 3 Baths | 1,882 SQFT", 
-        link: "https://afrproperty.onpay.my/order/form/subsale-tamanserimbuniskandarputeri" 
-    }
+];
 ];
 
 
@@ -135,6 +136,7 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
 
 
 
