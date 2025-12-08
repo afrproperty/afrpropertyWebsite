@@ -1,5 +1,12 @@
 const properties = [
     { 
+        img: "https://afrproperty.onpay.my/media/uploads/CHESTER 1.jpg", 
+        price: "RM 2,880,000", 
+        address: "Chester Eco Spring @ Eko Flora", 
+        details: "4+1 Beds | 5 Baths | 4,448 SQFT", 
+        link: "https://www.afrproperty.com/order/form/subsale-chesterecospringekoflora" 
+    },
+    { 
         img: "https://afrproperty.onpay.my/media/uploads/KENT ECO SPRING (1).jpg", 
         price: "RM 3,200,000", 
         address: "Kent Eco Spring @ Eko Flora", 
@@ -135,6 +142,7 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
 
 
 
