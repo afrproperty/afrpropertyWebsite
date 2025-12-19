@@ -1,5 +1,12 @@
 const properties = [
     { 
+        img: "https://afrproperty.onpay.my/media/uploads/DANGA.jpg", 
+        price: "RM 799,000", 
+        address: "Danga View Apartment @ Skudai Kiri", 
+        details: "3+1 Beds | 5 Baths | 2,125 SQFT", 
+        link: "https://www.afrproperty.com/order/form/subsale-dangaviewapartment" 
+    },
+    { 
         img: "https://afrproperty.onpay.my/media/uploads/CHESTER 1.jpg", 
         price: "RM 2,880,000", 
         address: "Chester Eco Spring @ Eko Flora", 
@@ -142,6 +149,7 @@ prevBtn.addEventListener("click", () => {
         });
 
         renderProperties();
+
 
 
 
